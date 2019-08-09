@@ -1,0 +1,80 @@
+body,html{
+    /* height: 100%; */
+    background: #f3f3f3;
+}
+.container{
+    /* height: 100% ; */
+} 
+
+.gsm{
+    text-align: center;
+    font-size: 16rpx;
+    color: #a7a7a7;
+    margin-top: 23rpx;
+}
+.iphone{
+text-align: center;
+    font-size: 18rpx;
+    color: #a7a7a7;
+    margin-top: 8rpx;
+} 
+
+
+.navbar{ 
+ display: flex; 
+ width: 100%; 
+ flex-direction: row; 
+ line-height: 71rpx; 
+ 
+} 
+.navbar .item{ 
+ flex: auto; 
+ text-align: center; 
+ background: #fff;  
+} 
+.navbar text{
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    border-bottom: 4rpx solid #e1e1e1;
+    line-height: 71rpx;
+    float: left;
+    font-size: 40rpx;
+    background: #fff;
+}
+.navbar .item.active{ 
+ border-bottom: 4rpx solid #db0c28;
+     color: #db0c28;
+     font-size: 40rpx;
+ 
+} 
+.news-list{
+    background: #fff;
+    
+}
+
+.news-list view{ 
+    line-height: 98rpx;
+    height: 98rpx;
+    border-bottom: 4rpx solid #e1e1e1;
+    font-size: 32rpx;
+    color:#1e1e1e;
+    font-weight: bold;
+       text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.news-list  view:last-child {
+    border-bottom: none;
+}
+.hover-title{
+    background: #ebeced;
+}

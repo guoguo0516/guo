@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="navbar"> 
+        <text s-for="{{navbar}}" data-index="{{index}}"
+        class="item {{currentIndex==index?'active':''}}"
+        bindtap="navbarTab">{{item}}</text> 
+     </view> 
+
+
+
+
+     <view class="project-list-box  min-width" s-if="{{currentIndex!==1}}">
+            <view class="project-list" s-for="item in projectList" >
+                <view class="project-logo">
+                    <image src="{{primaryurl}}{{item.thumb}}" mode="widthFix"></image>
+                </view>
+                <view class="project-txt">
+                    <text class="title">{{item.name}}</text>        
+                    <text class="describe">{{item.des}}</text>
+                    <text class="tzje">{{item.money}}</text>
+                </view>
+                <button class="consulting" data-index="{{item.id}}" bindtap="newsDetailed">
+                    咨询
+                </button>         
+            </view>
+     </view>
+         
+      
+       
+</view>

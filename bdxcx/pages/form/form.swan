@@ -1,0 +1,19 @@
+<view class="container">
+   <!-- 在线留言 -->
+      <view name="form" class="msg-form">
+            <text>在线留言</text>
+            <input type="text"  placeholder="姓名" name="姓名" bindinput="nameChange"/>
+             <input type="text"  placeholder="手机" name="手机" maxlength="11" bindinput="phoneChange"/>
+             <input type="text"  placeholder="留言板" name="留言板" bindinput="msgChange"/>
+             
+              <!-- <checkbox-group bindchange="radioChange" class="checkbox-group"> 
+                <checkbox class="terms" value="1" >&nbsp;&nbsp;我已阅读并同意</checkbox>
+                <text>《戴龙企业服务条款》</text> 
+               </checkbox-group> -->
+                <view>
+                  <button type="primary" class="btn primary" disabled="{{terms}}" bindtap="onTap">
+                     提交咨询
+                  </button>
+               </view>
+      </view>
+</view>

@@ -1,0 +1,8 @@
+{
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "戴龙餐饮",
+     "usingComponents": {
+        "form": "../form/form"
+    }
+
+}

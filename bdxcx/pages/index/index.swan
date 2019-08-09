@@ -1,0 +1,61 @@
+<!-- index.swan -->
+<view class="container ">
+	<!-- 头部选项卡 -->
+	<view class="index-headTab">
+		<view class="tab-active" bindtap="recom">
+			推荐
+		</view>
+		<view></view>
+		<view></view>
+	</view>
+
+
+	<!-- 轮播图 -->
+	<view class="wrap">
+		<view class="swiper-wrap">
+			<swiper indicator-color="rgba(0,0,0,0.30)" indicator-active-color="#fff" duration="{{switchDuration}}" interval="{{autoPlayInterval}}"
+			 autoplay="{{switchAutoPlayStatus}}" indicator-dots="{{switchIndicateStatus}}" vertical="false" circular="true" current="0"
+			 bind:change="swiperChange">
+				<block s-for="item in indexbanner">
+					<swiper-item>
+						<image src="{{primaryurl}}{{item.image}}" mode="widthFix"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<!-- 项目推荐 -->
+
+		<view>
+			<view class="project-title">
+				<image src="../../images/icon1.png" mode="widthFix"></image>
+				<image src="../../images/icon2.png" mode="widthFix"></image>
+				<image src="../../images/icon3.png" mode="widthFix"></image>
+			</view>
+			<view class="projectImg">
+				<view class="projectImg-box" s-for="item in projectImg">
+					<image src="{{primaryurl}}{{item.thumb}}" mode="widthFix" data-index="{{item.id}}" bindtap="recom"></image>
+				</view>
+			</view>
+		</view>
+		<view class="project-list-box">
+			<view class="project-list min-width" s-for="item in projectList">
+
+				<view class="project-logo">
+					<image src="{{primaryurl}}{{item.thumb}}" mode="widthFix"></image>
+				</view>
+				<view class="project-txt">
+					<text class="title">{{item.name}}</text>
+					<text class="describe">{{item.des}}</text>
+					<text class="tzje">{{item.money}}</text>
+				</view>
+
+				<button class="consulting" data-index="{{item.id}}" bindtap="recom">
+					咨询
+				</button>
+
+			</view>
+		</view>
+	</view>
+
+
+</view>

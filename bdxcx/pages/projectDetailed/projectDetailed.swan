@@ -1,0 +1,139 @@
+<import src="../../bdParse/bdParse.swan" />
+
+<view class="container">
+  <scroll-view style="height:100%;" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" bindscroll="bindscroll" >
+    <button type="primary" class="btn primary  Open-mode" bindtap="showDialogBtn">
+            一键获取开店方式
+        </button>
+     <!-- 轮播图 -->
+    <view class="wrap">
+        <view class="swiper-wrap">
+            <swiper 
+                indicator-color="rgba(0,0,0,0.30)"
+                indicator-active-color="#fff"
+                duration="{{switchDuration}}"
+                interval="{{autoPlayInterval}}"
+                autoplay="{{switchAutoPlayStatus}}"
+                indicator-dots="{{switchIndicateStatus}}" 
+                vertical="false"
+                circular="true"
+                current="0"
+                bind:change="swiperChange"
+            >
+                <block s-for="item in projectbanner">
+                    <swiper-item class="{{item.className}}">
+                        <image src="{{primaryurl}}{{item.image}}"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+    <!-- 项目 -->
+    <view class="project-top">
+         <view class="project-logo">
+            <image src="{{primaryurl}}{{setdata.thumb}}" mode="widthFix"></image>
+         </view>
+         <view class="project-txt">
+            <view class="project-title">{{setdata.name}}</view>
+            <view class="project-tzje">投资金额:<text>{{setdata. money}}</text></view>
+            <view class="project-ljsq" bindtap='scrollToViewFn'  data-opt="msg">立即申请</view>
+         </view>
+    </view>
+        <!-- 项目详情 -->
+      
+       <view class="navbar"> 
+        <text s-for="{{navbar}}" data-index="{{index}}"
+        class="item {{currentIndex==index?'active':''}}"
+        bindtap="navbarTab">{{item}}</text> 
+        </view> 
+        
+        <view class="news-list" s-if="{{currentIndex ==0}}">
+            <view class="pattern">
+                <text>成立时间:{{setdata.found}}</text>
+                <text>经营模式:{{setdata.manage}}</text>
+            </view>
+            <view class="phone-form">
+                <text class="phone-form-title">免费获取资料</text>
+                <view class="phone-input">
+                    <input type="number" maxlength="11" bindinput="phoneChange" placeholder="请输入手机号码  (我们严格保密)"/>
+                    <button type="default" class="middle-btn" bindtap="phoneform">立即申请</button>
+                 </view>
+                 <!-- <view>
+                    <checkbox-group bindchange="radioChange" class="checkbox-group"> 
+                        <checkbox class="terms" value="1" >&nbsp;&nbsp;我已阅读并同意</checkbox>
+                        <text>《戴龙企业服务条款》</text> 
+                    </checkbox-group>
+                </view> -->
+            </view>
+            <view class="project-list">
+              <template is="bdParse" data="{{ {bdParseData:introduction.nodes} }}" />
+          </view>
+        </view>
+        <view class="news-list"  s-if="{{currentIndex == 1}}">
+          <view class="project-list">
+             <template is="bdParse" data="{{ {bdParseData:article.nodes} }}" />
+          </view>
+        </view>
+        <view class="news-list"  s-if="{{currentIndex ==2}}">
+          <view class="project-list">
+            <template is="bdParse" data="{{ {bdParseData:support.nodes} }}" />
+          </view>
+        </view>
+        <view class="news-list"  s-if="{{currentIndex ==3}}">
+          <view class="project-list">
+             <template is="bdParse" data="{{ {bdParseData:conditions.nodes} }}" />
+          </view>
+        </view>
+        <!-- 在线留言 -->
+        <view  id="msg"><form name="form" ></form></view>
+        <view class="hr"></view>
+        <!-- 相关内容 -->
+        <view class="related">
+            <view class="related-title">
+                 <image src="../../images/right-jt.png" mode="widthFix" />
+                 <text>相关推荐</text>
+            </view>
+            <view class="related-list" s-for="item in infoRecommend"  bindtap="newsDetailed">
+                <view hover-class="related-txt-hover" data-index="{{item.id}}" data-typeid="{{item.type_id}}">{{item.title}}</view>
+            </view>
+        </view>
+
+<!-- 模态框 -->
+
+<!-- 
+弹窗 -->
+ 
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" s-if="{{showModal}}"></view>
+        
+        <view class="modal-dialog" s-if="{{showModal}}">
+        
+        <view class="modal-title">请输入您的手机号</view>
+        
+        <view class="modal-content">
+        
+        <view class="modal-input">
+        
+         <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input"   />
+        
+        </view>
+
+        <!-- <view>
+             <checkbox-group bindchange="radioChange" class="checkbox-group"> 
+                <checkbox class="terms" value="1" >&nbsp;&nbsp;我已阅读并同意</checkbox>
+                <text>《戴龙企业服务条款》</text> 
+               </checkbox-group>
+        </view> -->
+        
+        </view>
+        
+        <view class="modal-footer">
+        
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+        
+        </view>
+ 
+</view>
+     </scroll-view>
+</view>

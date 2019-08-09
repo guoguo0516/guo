@@ -1,0 +1,26 @@
+<view class="container">
+        <view class="navbar"> 
+        <text s-for="{{navbar}}" data-index="{{index}}"
+        class="item {{currentIndex==index?'active':''}}"
+        bindtap="navbarTab">{{item}}</text> 
+        </view> 
+        
+        <view class="news-list" s-if="{{currentIndex!==1}}" bindtap="newsDetailed">
+            <view class="min-width" hover-class="hover-title" s-for="item in newsOne" data-index="{{item.id}}">
+             {{item.title}}
+          </view>
+        </view>
+        <view class="news-list"  s-if="{{currentIndex!==0}}" bindtap="newsDetailed">
+          <view class="min-width" hover-class="hover-title" s-for="item in newsTwo" data-index="{{item.id}}">
+             {{item.title}}
+          </view>
+        </view>
+         
+     <view class="gsm">
+            戴龙企业管理有限公司
+           
+        </view>
+        <view class="iphone">
+             服务热线:400-060-1539
+        </view> 
+</view>

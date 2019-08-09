@@ -1,0 +1,63 @@
+<import src="../../bdParse/bdParse.swan" />
+<view class="container">
+<scroll-view style="height:100%;" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" bindscroll="bindscroll" >
+    <view class="project-top">
+         <view class="project-logo">
+            <image src="{{primaryurl}}{{setdata.pro_img}}" mode="widthFix"></image>
+         </view>
+         <view class="project-txt">
+            <view class="project-title">{{setdata.pro_name}}</view>
+            <view class="project-tzje">投资金额:<text>{{setdata. money}}</text></view>
+            <view class="project-ljsq" bindtap='scrollToViewFn'  data-opt="msg">立即申请</view>
+         </view>
+      </view>
+      <!-- 新闻详情 -->
+       <view class="info min-width">
+             <text class="info-title">{{setdata.title}} </text>
+             <text class="info-author" decode="{{true}}">作者:&ensp;{{setdata.pro_name}}&emsp;&emsp;来源:&ensp;戴龙企业餐饮加盟</text>
+             <text class="info-time">{{setdata.create_time}}</text>
+             <view class="info-abstract-box">
+               <view class="info-abstract">
+                     <view class="abstract-title">
+                     <text>摘\n要</text>
+                        </view>
+                     <view class="abstract-list">
+                        <text>{{setdata.descrition}}</text>
+                     </view>
+               </view>
+             </view>
+            
+      </view>
+        <view class="info-txt">
+          <template is="bdParse" data="{{ {bdParseData:article.nodes} }}" />
+        </view>
+   
+        
+
+      <!-- 在线留言 -->
+      <view id="msg"><form name="form"></form></view>
+
+      <view class="hr"></view>
+       
+       <view class="Recommend-article">
+            <view class="Recommend-title">
+                  <image src="../../images/right-jt.png" mode="widthFix" />
+                  <text>推荐文章</text>
+            </view>
+            <view class="article-list" s-for="item in newsRecommend"   bindtap="newsDetailed" data-index="{{item.id}}" data-typeid="{{item.type_id}}">
+                
+                   
+                  <view class="article-txt" data-index="{{item.id}}" data-typeid="{{item.type_id}}">
+                     <tvext class="article-title" >{{item.title}}</text>
+                     <text class="article-time">{{item.create_time}}</text>
+                     
+                  </view>
+                   <view class="article-logo" >
+                     <image src="{{primaryurl}}{{item.thumb}}" data-index="{{item.id}}" data-typeid="{{item.type_id}}"/>
+                  </view> 
+                  
+                
+            </view>
+       </view>
+     </scroll-view>
+</view>

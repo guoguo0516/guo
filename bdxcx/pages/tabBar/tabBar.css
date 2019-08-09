@@ -1,0 +1,117 @@
+/* miniprogram/pages/tabBar/tabBar.wxss */
+page{
+  padding-bottom: 100rpx;
+  position: relative;
+}
+.icon{
+  width:40rpx;
+  height: 40rpx;
+}
+.tabBar{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  padding:10rpx; 
+  font-size:24rpx;
+  color:#8A8A8A;
+  border-top: 4rpx solid #f5f5f5;
+}
+ 
+ .tabBar-item{
+  float:left;
+  width:33.33%;
+  text-align: center;
+  overflow: hidden;
+}
+/*当前字体颜色*/
+.tabBartext{
+  color:#db0c28;
+}
+ 
+.tabBar button {
+  display: initial;
+  border: none;
+  line-height: unset;
+  height: unset;
+  width: unset;
+  padding :0;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  font-size: unset;
+  color: unset;
+  outline: none;
+}
+ 
+ 
+.mobile-service {
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+ 
+.mobile-service .content {
+  width: 100%;
+  height: 400rpx;
+  box-shadow: 0 10rpx 12rpx 0 
+		rgba(0, 0, 0, 0.2);
+	border-radius: 40rpx 40rpx 0 0;
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 0;
+}
+ 
+ 
+.mobile-service .content text {
+  font-size: 30rpx;
+	line-height: 48rpx;
+	letter-spacing: 2rpx;
+	color: #ffffff;
+}
+ 
+.mobile-service .content .title {
+  display: block;
+  font-size: 48rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}
+ 
+.mobile-service .content .des {
+  width: 586rpx;
+  margin: 40rpx auto 0;
+}
+ 
+.mobile-service .content .des .phonenumber {
+  font-size: 30rpx;
+  color: #bf9571;
+}
+ 
+.mobile-service .content .bottom-button {
+  margin-top: 50rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+ 
+.mobile-service .content .bottom-button button{
+  width: 200rpx;
+	height: 50rpx;
+  font-size: 26rpx;
+  color: #FFF;
+  line-height: 50rpx;
+	background: none;
+	box-shadow: 0 4rpx 4rpx 0 
+		rgba(0, 0, 0, 0.2);
+	border-radius: 10rpx;
+	border: solid 1px #bf9571;
+  margin: 0 10rpx;
+}
+.mobile-service .content .bottom-button .ok-button {
+  background: #bf9571;
+  border: none;
+}

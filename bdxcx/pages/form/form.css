@@ -1,0 +1,45 @@
+/* 在线留言 */
+.msg-form{
+    /* margin-top: 70rpx; */
+    margin: 70rpx 30rpx 80rpx 30rpx;
+   
+}
+
+.msg-form>text{
+    margin-bottom: 30rpx;
+    display: block;
+    color: #c60c24;
+    font-size: 33rpx;
+    line-height: 70rpx;
+    border-bottom: 4rpx solid #f5f5f5;
+}
+.msg-form input{
+    border: 6rpx solid #f5f5f5;
+    border-radius: 8rpx;
+    margin-bottom: 12rpx;
+    padding: 20rpx;
+    font-size: 32rpx;
+    height: 68rpx;
+    
+   
+}
+.checkbox-group{
+    height: 24rpx;
+   
+}
+.terms{
+    height: 24rpx;
+    zoom: 65%;
+   
+}
+.checkbox-group>text{
+    font-size: 20rpx;
+    color: #1d90ef
+}
+.primary{
+    margin-top: 50rpx;
+    background: #c60c24 !important;
+}
+.hr{
+    border-bottom: 32rpx solid #f5f5f5;
+}

@@ -1,0 +1,13 @@
+
+<view class="container">
+    <view class="tabBar">
+  <block s-for="{{tabBar}}" s-for-item="item" s-key="tabBar">
+    <view class="tabBar-item" data-index="{{index}}">
+      <navigator url="{{item.pagePath}}" hover-class="navigator-hover" open-type='switchTab'>
+        <view><image class="icon" src='{{item.current== 1 ? item.selectedIconPath : item.iconPath}}'></image></view>
+        <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+      </navigator>  
+    </view>
+  </block>
+</view>
+</view>

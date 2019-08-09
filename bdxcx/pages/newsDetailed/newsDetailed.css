@@ -1,0 +1,256 @@
+@import "../../bdParse/bdParse.css";
+page{
+    height: 100%;
+}
+
+swan-view{overflow: initial}
+body,html{
+    height: 100%;
+    position: relative;
+}
+.bdParse-p{
+    overflow: hidden;
+    margin: 0px !important;
+}
+.container{
+    height: 100%;
+} 
+.bdParse-p{
+    overflow: hidden;
+}
+.project-top{
+ height: 190rpx;
+ border-bottom: 6rpx solid #f5f5f5;
+ padding:0rpx 30rpx;
+align-items: center;
+display: flex;
+}
+.project-logo{
+ display: inline-block;
+ width: 162rpx;
+ height: 162rpx;
+ border: 4rpx solid #f5f5f5;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ float: left;
+}
+.project-logo image{
+    width: 70%;
+}
+.project-txt{
+    display: inline-block;
+    margin-left: 57rpx;
+}
+.project-title{
+      font-size: 34rpx;
+    font-weight: bold;
+    color: #000;
+    margin-top: 4rpx;
+
+}
+.project-tzje{
+    font-size: 18rpx;
+    color: #d1d1d1;
+    margin-top: 8rpx;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.project-tzje text{
+    color: #db0c28;
+    margin-left: 12rpx;
+}
+.project-ljsq{
+    background: #c60c24;
+    height: 54rpx;
+    width: 220rpx;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    line-height: 54rpx;
+    border-radius: 10rpx;
+    margin-top: 13rpx;
+    font-size: 20rpx;
+}
+
+
+/* 新闻内容样式 */
+.info{
+    margin-top: 32rpx;
+}
+.info>text{
+    display: block
+}
+.info-title{
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: bold;
+       text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+}
+.info-author{
+    margin-top: 30rpx;
+}
+.info-author,.info-time{
+    text-align: center;
+    font-size: 18rpx;
+    color: #b4b4b4;
+    font-weight: normal;
+    
+}
+.info-time{
+    margin-top: 8rpx;
+}
+.info-abstract-box{
+  display: flex;
+  justify-content: center;
+}
+.info-abstract{
+    width: 90%;
+    display: inline-block;
+    height: 100rpx;
+    margin: 56rpx auto;
+}
+.info-abstract .abstract-title{
+    display: flex;
+    width: 20%;
+    float: left;
+    height: 100%;
+    background: #cbcbcb;
+    align-items: center;
+    justify-content: center;
+}
+.info-abstract .abstract-title text{
+    font-size:30rpx;
+    font-weight: bold;
+}
+.info-abstract .abstract-list{
+    display:flex;
+    width: 80%;
+    float: right;
+    height: 100%;
+    background: #f4f4f4;
+     align-items: center;
+    justify-content: center;
+}
+.info-abstract .abstract-list text{
+    font-size: 20rpx;
+    text-align: left;
+    font-weight: bold;
+    line-height: 35rpx;
+    width: 85%;
+       text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+}
+.info-txt{
+    margin: 0rpx 55rpx;
+}
+
+.info-txt>image{
+    width: 100%;
+    margin: 17rpx 0rpx;
+}
+
+
+
+.hr{
+    border-bottom: 32rpx solid #f5f5f5;
+}
+
+
+
+/* 推荐文章 */
+.Recommend-title{
+    padding: 30rpx 15rpx;
+    border-bottom: 7rpx solid #f5f5f5;
+}
+.Recommend-title>image{
+    width: 25rpx;
+    display: inline-block
+}
+.Recommend-title>text{
+    font-size: 25rpx;
+    font-weight: bold;
+    margin-left: 10rpx;
+}
+.article-list{
+    margin: 0rpx 35rpx;
+     border-bottom: 4rpx solid #f5f5f5;
+     padding: 35rpx 0rpx;
+     overflow: hidden;
+     position: relative;
+     min-height: 240rpx;
+}
+.article-list .article-txt{
+    display: inline-block;
+    float:left;
+    width: 70%;
+}
+.article-list .article-txt .article-title{
+    font-size: 35rpx;
+    color: #000;
+    font-weight: bold;
+       text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.article-list .article-txt .article-time{
+    position: absolute;
+    bottom: 35rpx;
+    left: 0;
+    font-size: 23rpx;
+    color: #b5b5b5;
+}
+.article-list .article-logo{
+    display:inline-block;
+    float: right;
+    width: 30%;
+    height: 162rpx;
+ 
+}
+.article-logo{
+    
+    
+    
+}
+.article-logo>image{
+    width:  162rpx;
+    height: 162rpx;
+    float: right;
+    
+
+}
+.article-list:last-child{
+    border-bottom: none;
+}

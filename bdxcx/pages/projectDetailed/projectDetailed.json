@@ -1,0 +1,8 @@
+{
+    
+    "navigationBarTextStyle": "white",
+      "usingComponents": {
+        "form": "../form/form"
+    }
+
+}

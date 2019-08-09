@@ -1,0 +1,143 @@
+/* 头部选项卡 */
+
+.navbar{ 
+ display: flex; 
+ width: 100%; 
+ flex-direction: row; 
+ line-height: 71rpx; 
+} 
+.navbar .item{ 
+ flex: auto; 
+ text-align: center; 
+} 
+.navbar text{
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    border-bottom: 4rpx solid #e1e1e1;
+    line-height: 71rpx;
+    height: 71rpx;
+    float: left;
+    font-size: 40rpx;
+   
+}
+.navbar .item.active{ 
+ border-bottom: 4rpx solid #db0c28;
+     color: #db0c28;
+     font-size: 40rpx;
+ 
+} 
+
+.projectImg{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+.projectImg-box{
+    width: 33.3%;
+    height: 134rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.projectImg-box image{
+    width: 70%;
+   
+}
+.project-list{
+    padding: 15rpx 0rpx;
+    border-bottom: 4rpx solid #f4f4f4;
+    overflow: hidden;
+}
+.project-list:last-child{
+     border-bottom: none;
+}
+.project-list .project-logo{
+    width: 162rpx;
+    height: 162rpx;
+    margin-left: 13rpx;
+     float: left;
+}
+.project-list .project-logo {
+      width: 162rpx;
+    height: 162rpx;
+    margin-left: 13rpx;
+     float: left;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.project-list .project-txt{
+    display: inline-block;
+   width: 60%;
+}
+.project-list .project-txt text{
+   display: block;
+   padding-left: 16rpx;
+
+}
+.project-list .project-txt .title{
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10rpx;
+     text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+}
+.project-list .project-txt .describe{
+    font-size: 24rpx;
+    color: #d1d1d1;
+    margin-top: 18rpx;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.project-list .project-txt .tzje{
+    font-size: 22rpx;
+    color: #ca8c9a;
+    margin-top: 15rpx;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -ms-box;
+    display: block;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+}
+.project-list .consulting{
+    display: inline-block;
+    width: 100rpx;
+    height: 58rpx;
+    border-radius: 30rpx;
+   border:4rpx solid rgb(139, 155, 217);
+   text-align: center;
+   line-height: 50rpx;
+   float: right;
+   margin-top: 50rpx;
+   font-size:28rpx; 
+   color: rgb(139, 155, 217);
+   padding: 0;
+    box-sizing: inherit;
+   
+}

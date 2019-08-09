@@ -1,0 +1,22 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+ 
+}
+swan-image{
+    height: auto;
+}
+.min-width{
+    margin:auto 30rpx;
+}
+swan-button{
+    border:none; 
+}
+swan-button::after{
+    border:none; 
+}

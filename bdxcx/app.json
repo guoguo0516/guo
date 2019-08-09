@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+         "pages/projectDetailed/projectDetailed",
+        "pages/newsDetailed/newsDetailed",
+        "pages/newsDetailed/newsDetailed",
+        "pages/news/news",
+        "pages/project/project"
+        
+        
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#db0c28",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "景卓餐饮"
+    },
+    "tabBar": {
+        "color": "#a5a5a5",
+        "selectedColor": "#db0c28",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/index.png",
+                "selectedIconPath": "images/index_active.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/project/project",
+                "iconPath": "images/project.png",
+                "selectedIconPath": "images/project_active.png",
+                "text": "项目"
+            },
+            {
+                "pagePath": "pages/news/news",
+                "iconPath": "images/form.png",
+                "selectedIconPath": "images/form_active.png",
+                "text": "资讯"
+            }
+        ]
+    }
+}
